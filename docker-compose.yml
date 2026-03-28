@@ -1,0 +1,24 @@
+version: "3.9"
+services:
+  procesar:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: procesar
+    ports:
+      - "8000:8000"
+    environment:
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - AWS_DEFAULT_REGION=us-east-1
+  consultar:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: consultar
+    ports:
+      - "8001:8001"
+    environment:
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - AWS_DEFAULT_REGION=us-east-1
