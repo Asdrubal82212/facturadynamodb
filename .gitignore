@@ -1,0 +1,7 @@
+aws/
+awscliv2.zip
+terraform/.terraform/
+terraform/terraform_1.9.5_linux_amd64.zip
+procesar/__pycache__/
+consultar/__pycache__/
+.env
